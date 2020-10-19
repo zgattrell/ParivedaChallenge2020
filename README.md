@@ -2,4 +2,4 @@
 
 My submission for the Pariveda Challenge 2020 at the University of Alabama
 
-This is a webapp that will scan pdfs documents for class syllabuses and enter them into a document to be  upload to an online calendar. 
+This is a webapp that will scan in a C# source file and automatically create a flowchart from the file. It is a form of control flow analysis.
