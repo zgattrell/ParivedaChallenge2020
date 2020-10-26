@@ -1,0 +1,4 @@
+C:\source\repos\parivedaCompetition\obj\Debug\net48\parivedaCompetition.csprojAssemblyReference.cache
+C:\source\repos\parivedaCompetition\obj\Debug\net48\parivedaCompetition.AssemblyInfoInputs.cache
+C:\source\repos\parivedaCompetition\obj\Debug\net48\parivedaCompetition.AssemblyInfo.cs
+C:\source\repos\parivedaCompetition\obj\Debug\net48\parivedaCompetition.csproj.CoreCompileInputs.cache

@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>@Model.FileName</div>
+<!--<div>@Model.functionList</div> -->
+@foreach (Function f in Model.functions){
+    <li>@f.getName()</li>
+}
+
+    <form method="post" action="" enctype="multipart/form-data">
+        <input name="file1" type="file" />
+        <button type="submit">Upload</button>
+    </form>
