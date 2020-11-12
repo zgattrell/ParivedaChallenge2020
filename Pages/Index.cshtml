@@ -3,14 +3,65 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
+<div class="center-div">
+    <h1>Pariveda Challenge 2020</h1>
+    <hr/>
+    <p>by Zachary Gattrell</p>
+    <br/>
 <div>@Model.FileName</div>
-<!--<div>@Model.functionList</div> -->
-@foreach (Function f in Model.functions){
-    <li>@f.getName()</li>
-}
-
+<!-- Add analysis of types of conditional statements, every console.writeline, processing variables-->
+<!-- 1. Find main method, read through main method for other functions, -->
     <form method="post" action="" enctype="multipart/form-data">
         <input name="file1" type="file" />
         <button type="submit">Upload</button>
     </form>
+    <hr/>
+    <hr/>
+
+    @foreach (Function f in Model.functions){
+    <h3>@f.getName()</h3>
+    <b>Methods Called:</b>
+    for(int i = 0; i < f.getFunctionsCalled(Model.functions).Count; i++){
+        <li>@f.getFunctionsCalled(Model.functions)[i]</li>
+    }
+
+    <b>If Statements:</b>
+    @f.getIfNumber();
+
+    <br/>
+    <b>Else Statements:</b>
+    @f.getElseNumber();
+
+    <br/>
+    <b>While Loops:</b>
+    @f.getWhileNumber();
+
+    <br/>
+    <b>For Loops:</b>
+    @f.getForNumber();
+
+    <br/>
+    <b>Int Declarations:</b>
+    @f.getIntNumber();
+
+    <br/>
+    <b>Boolean Declarations:</b>
+    @f.getBoolNumber();
+
+
+    <br/>
+    <b>Console writes:</b>
+    for(int j = 0; j < f.getConsoleWrites().Count; j++){
+        <li>@f.getConsoleWrites()[j]</li>
+    }
+    <hr/>
+    }
+
+    </div>
+
+
+    <style>
+        .center-div{
+            text-align: center;
+        }
+    </style>

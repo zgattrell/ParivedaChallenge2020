@@ -16,14 +16,11 @@ namespace parivedaCompetition.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         public String FileName {get; set;}
-        public String functionList {get; set;}
-
         public List<Function> functions {get; set;}
 
         public IndexModel(ILogger<IndexModel> logger)
         {
             FileName = "File name not available";
-            functionList = "";
             _logger = logger;
             this.functions = new List<Function>();
         }
@@ -39,11 +36,7 @@ namespace parivedaCompetition.Pages
             List<Function> functions = getFunctionLists(FileToStringList(file1));
             //Create string of functions
             this.functions = functions;
-            String retFunctionList = "";
-            for(int i = 0; i < functions.Count; i++){
-                retFunctionList += ("<li>" + functions[i].getName() + "</li>");
-            }
-            functionList = retFunctionList;
+            //Search through 
 
         }
 
@@ -84,7 +77,6 @@ namespace parivedaCompetition.Pages
                             int j = 1;
                             //Attempt to search through each line underneath the declaration until the opening bracket is found.
                             while(!functionOpened){
-                                Console.WriteLine("Function Not opened yet");
                                 if(lines.ElementAt<String>(i + j).Contains("{")){
                                     operatingLine = i+j;
                                     functionOpened = true;
@@ -99,7 +91,6 @@ namespace parivedaCompetition.Pages
                         int openedBrackets = 1;
                         List<String> functionBody = new List<String>();
                         while(openedBrackets != 0){
-                            Console.WriteLine("Opening Brackets=" + openedBrackets);
                             String currentLine = lines.ElementAt<String>(operatingLine);
                             if(currentLine.Contains("{")){
                                 openedBrackets++;
@@ -120,12 +111,6 @@ namespace parivedaCompetition.Pages
                         //a level for a Opening one and "down" a level for a closing one.
                         //Write every line within a method to a list of strings and export it
                 }
-            }
-            for(int p = 0; p < functions.Count; p++){
-                Console.WriteLine("Function Name: " + functions[p].getName());
-                Console.WriteLine("Function Args: " + functions[p].getArgs()[0]);
-                Console.WriteLine("1st line of Function Body: " + functions[p].getBody()[0]);
-                Console.WriteLine("Last line: " + functions[p].getBody()[functions[p].getBody().Count -1]);
             }
             return functions;
         }

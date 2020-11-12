@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\source\\repos\\parivedaCompetition\\parivedaCompetition.csproj",
+      "projectUniqueName": "C:\\source\\repos\\ParivedaChallenge2020\\parivedaCompetition.csproj",
       "projectName": "parivedaCompetition",
-      "projectPath": "C:\\source\\repos\\parivedaCompetition\\parivedaCompetition.csproj",
+      "projectPath": "C:\\source\\repos\\ParivedaChallenge2020\\parivedaCompetition.csproj",
       "packagesPath": "C:\\Users\\zacha\\.nuget\\packages\\",
-      "outputPath": "C:\\source\\repos\\parivedaCompetition\\obj\\",
+      "outputPath": "C:\\source\\repos\\ParivedaChallenge2020\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zacha\\AppData\\Roaming\\NuGet\\NuGet.Config"
